@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static ArrayList<Utility> listViewUtilityList ;
 
-    public static ArrayList<Utility> utilityList ;
-    public static ArrayList<User> userList ;
+    public static ArrayList<Utility> utilityList = null;
+    public static ArrayList<User> userList  = null;
+
+//    public static String utilityType = "";
 
 
     ListView listViewUtilityType ;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 utilityObj = listViewUtilityList.get(position);
+
                 Intent intent = new Intent(getBaseContext(),MainActivity2.class);
                 startActivity(intent);
             }
@@ -80,15 +83,27 @@ public class MainActivity extends AppCompatActivity {
         utilityList.add(new Utility(43,"Water",100,R.mipmap.water));
         utilityList.add(new Utility(53,"NetFlix",70,R.mipmap.netflix));
 
+        utilityList.add(new Utility(14,"Hydro",1100,R.mipmap.hydro));
+        utilityList.add(new Utility(24,"Mobile",190,R.mipmap.mobile));
+        utilityList.add(new Utility(34,"Gas",1200,R.mipmap.gas));
+        utilityList.add(new Utility(44,"Water",150,R.mipmap.water));
+        utilityList.add(new Utility(54,"NetFlix",170,R.mipmap.netflix));
+
+        utilityList.add(new Utility(15,"Hydro",2140,R.mipmap.hydro));
+        utilityList.add(new Utility(25,"Mobile",270,R.mipmap.mobile));
+        utilityList.add(new Utility(35,"Gas",250,R.mipmap.gas));
+        utilityList.add(new Utility(45,"Water",210,R.mipmap.water));
+        utilityList.add(new Utility(55,"NetFlix",270,R.mipmap.netflix));
+
 
 
     }
 
     public void fillUserData(){
 
-        userList.add(new User(21,"James", 1000,new int[]{11,21,31,41,51}));
-        userList.add(new User(22,"Thames", 2000,new int[]{12,22,32,42,52}));
-        userList.add(new User(23,"Names", 3000,new int[]{13,23,33,43,53}));
+        userList.add(new User(911,"James", 1000,new int[]{11,21,31,41,51, 14,24,34,44,54}));
+        userList.add(new User(912,"Thames", 2000,new int[]{12,22,32,42,52, 15,25,35,45,55}));
+        userList.add(new User(913,"Names", 3000,new int[]{13,23,33,43,53}));
 
 
     }
