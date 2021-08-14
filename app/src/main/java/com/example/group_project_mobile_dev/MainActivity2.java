@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
     EditText subscriptionNum;
     Button btnSubNum;
+    public static int userId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +34,13 @@ public class MainActivity2 extends AppCompatActivity {
                     };
                 }
                 if(postn == -1){
-                    //alert
+                    Toast.makeText(getApplicationContext(),"Wrong Subscription Number",Toast.LENGTH_SHORT).show();
                 }else {
-
+                    userId = subNum;
+                    Intent intent = new Intent(getBaseContext(),BillPayActivity.class);
+                    startActivity(intent);
                 }
-//                float productPrice = MainActivity.prObj.getPrice();
-//                int quantity = Integer.parseInt(extQuantity.getText().toString());
-//                float costOfProducts = productPrice * quantity;
-//                MainActivity.total += costOfProducts;
-//                Intent intent = new Intent(getBaseContext(),MainActivity.class);
-//                startActivity(intent);
+
 
             }
         });

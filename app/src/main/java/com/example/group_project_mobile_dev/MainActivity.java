@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void filllistViewUtilityList(){
 
-        listViewUtilityList.add(new Utility(11,"Hydro",100,R.mipmap.hydro));
-        listViewUtilityList.add(new Utility(21,"Mobile",90,R.mipmap.mobile));
-        listViewUtilityList.add(new Utility(31,"Gas",200,R.mipmap.gas));
-        listViewUtilityList.add(new Utility(41,"Water",50,R.mipmap.water));
-        listViewUtilityList.add(new Utility(51,"NetFlix",70,R.mipmap.netflix));
+        listViewUtilityList.add(new Utility(19,"Hydro",0,R.mipmap.hydro));
+        listViewUtilityList.add(new Utility(29,"Mobile",0,R.mipmap.mobile));
+        listViewUtilityList.add(new Utility(39,"Gas",0,R.mipmap.gas));
+        listViewUtilityList.add(new Utility(49,"Water",0,R.mipmap.water));
+        listViewUtilityList.add(new Utility(59,"NetFlix",0,R.mipmap.netflix));
     }
 
 
